@@ -1,7 +1,8 @@
+import memoize from 'lodash.memoize';
 import React from 'react';
 import * as ReactIs from 'react-is';
 
-const findFirstText = (root: React.ReactNode): string | null => {
+const findFirstText = memoize((root: React.ReactNode): string | null => {
   let nodesQueue: React.ReactNode[] = React.Children.toArray(root);
 
   while (nodesQueue.length > 0) {
@@ -47,6 +48,6 @@ const findFirstText = (root: React.ReactNode): string | null => {
   }
 
   return null;
-};
+});
 
 export default findFirstText;
