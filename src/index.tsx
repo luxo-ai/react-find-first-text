@@ -1,3 +1,3 @@
-import findFirstTextChild from './findFirstText';
+import findFirstText from './findFirstText';
 
-export default findFirstTextChild;
+export default findFirstText;

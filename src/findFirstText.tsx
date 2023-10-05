@@ -1,7 +1,7 @@
 import React from 'react';
 import * as ReactIs from 'react-is';
 
-const findFirstTextChild = (root: React.ReactNode): string | null => {
+const findFirstText = (root: React.ReactNode): string | null => {
   let nodesQueue: React.ReactNode[] = React.Children.toArray(root);
 
   while (nodesQueue.length > 0) {
@@ -49,4 +49,4 @@ const findFirstTextChild = (root: React.ReactNode): string | null => {
   return null;
 };
 
-export default findFirstTextChild;
+export default findFirstText;
