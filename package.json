@@ -1,0 +1,74 @@
+{
+  "name": "react-find-first-text",
+  "version": "1.0.0",
+  "author": "luxo-ai luxo.ai@proton.me",
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "types": "dist/index.d.ts",
+  "source": "src/index.ts",
+  "scripts": {
+    "build:dev": "microbundle watch --no-compress --format modern,cjs",
+    "build": "microbundle --format modern,cjs --no-sourcemap",
+    "lint": "eslint ./src --ext .js,.ts,.jsx,.tsx",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-react": "^7.22.15",
+    "@babel/preset-typescript": "^7.23.0",
+    "@types/jest": "^29.5.5",
+    "@types/lodash.memoize": "^4.1.7",
+    "@types/react": "^18.2.25",
+    "@types/react-is": "^18.2.2",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
+    "babel-jest": "^29.7.0",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.2",
+    "jest": "^29.7.0",
+    "microbundle": "^0.15.1",
+    "prettier": "^3.0.3",
+    "tsc": "^2.0.4",
+    "tsc-node": "^0.0.3",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "lodash.memoize": "^4.1.2",
+    "react-is": "^18.2.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "files": [
+    "dist"
+  ],
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "babel-jest"
+    },
+    "testRegex": "\\.(test)\\.(ts|js|tsx|jsx)$",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "tsx",
+      "jsx"
+    ]
+  }
+}
